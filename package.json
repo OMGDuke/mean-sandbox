@@ -1,0 +1,23 @@
+{
+  "name": "mean-sandbox",
+  "version": "1.0.0",
+  "description": "Trying out mean tech stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OMGDuke/mean-sandbox.git"
+  },
+  "author": "Alex Robertson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OMGDuke/mean-sandbox/issues"
+  },
+  "homepage": "https://github.com/OMGDuke/mean-sandbox#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "grunt": "^1.0.1"
+  }
+}
