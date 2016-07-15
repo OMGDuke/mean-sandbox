@@ -13,7 +13,27 @@ var mongoose = require('mongoose'),
       created: {
         type: Date,
         default: Date.now
+      },
+      website: {
+        type: String,
+        get: function(url) {
+          if(!url) {
+            return url;
+          } else {
+            if (url.indexOf('http://') !== 0 &&
+            url.indexOf('https://')!== 0) {
+              url = 'http://' + url;
+            }
+            return url;
+          }
+        }
       }
+    });
+
+    UserSchema.set('toJSON', {getters: true});
+
+    UserSchema.virtual('fullName').get(function() {
+      return this.firstName + ' ' + this.lastName;
     });
 
     mongoose.model('User', UserSchema);
