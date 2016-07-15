@@ -5,7 +5,15 @@ var mongoose = require('mongoose'),
       firstName: String,
       lastName: String,
       email: String,
-      password: String
+      username: {
+        type: String,
+        trim:true
+      },
+      password: String,
+      created: {
+        type: Date,
+        default: Date.now
+      }
     });
 
     mongoose.model('User', UserSchema);
